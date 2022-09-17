@@ -26,7 +26,6 @@ public class TimePickerFragment extends DialogFragment
     @Override
     public void onTimeSet(TimePicker timePicker, int hour, int minute) {
         MainActivity activity = (MainActivity) getActivity();
-        // Invoke Main Activity's processTimePickerResult() method.
         activity.processTimePickerResult(hour, minute);
     }
 }
