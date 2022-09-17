@@ -83,21 +83,18 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     }
 
     public void processDatePickerResult(int year, int month, int day) {
-        // The month integer returned by the date picker starts counting at 0
-        // for January, so you need to add 1 to show months starting at 1.
         String month_string = Integer.toString(month + 1);
         String day_string = Integer.toString(day);
         String year_string = Integer.toString(year);
-        // Assign the concatenated strings to dateMessage.
+        
         String dateMessage = month_string + "-" + day_string + "-" + year_string;
         et1.setText(dateMessage);
     }
 
     public void processTimePickerResult(int hour, int minute) {
-        // Convert time elements into strings.
         String hour_string = Integer.toString(hour);
         String minute_string = Integer.toString(minute);
-        // Assign the concatenated strings to timeMessage.
+
         String timeMessage = hour_string + ":" + minute_string;
         et2.setText(timeMessage);
     }
